@@ -1,18 +1,25 @@
+import { useState } from "react";
 import Head from "next/head";
+import Banner from "../components/banner";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [btnText, setBtnText] = useState("View stores nearby");
+
+  const onClickButtonHandler = () => {
+    setBtnText("Loading");
+  };
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Coffee Finder</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Coffee Finder</h1>
+        <Banner buttonText={btnText} handleOnClick={onClickButtonHandler} />
       </main>
-      <footer className={styles.footer}></footer>
     </div>
   );
 }
