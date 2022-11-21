@@ -22,7 +22,7 @@ export default function Home() {
         <Banner buttonText={btnText} handleOnClick={onClickButtonHandler} />
         <div className={styles.heroImage}>
           <Image
-            src="/images/relax.svg"
+            src="/images/coffee.svg"
             width={250}
             height={300}
             alt="girl relaxing"
