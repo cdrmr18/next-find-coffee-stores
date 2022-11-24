@@ -29,9 +29,14 @@ export default function Home() {
             alt="girl relaxing"
           />
         </div>
-
-        <Card name={"Coffee store name"} img_url={"#"} href={"#"} />
       </main>
+      <section>
+        <Card
+          name={"Coffee store name"}
+          imgUrl="/images/relax.svg"
+          href="/coffee-stores/store-name"
+        />
+      </section>
     </div>
   );
 }

@@ -1,27 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
+import styles from "./card.module.css";
+import cls from "classnames";
 
 type CardProps = {
   name: string;
-  img_url: string;
+  imgUrl: string;
   href: string;
 };
 
 const Card = (props: CardProps) => {
   return (
-    <div>
-      <Link href={props.href}>
-        <a href="">
-          <h2>{props.name}</h2>
+    <Link href={props.href} className={styles.cardLink}>
+      <div className={cls("glass", styles.container)}>
+        <div className={styles.cardHeaderWrapper}>
+          <h2 className={styles.header}>{props.name}</h2>
+        </div>
+        <div className={styles.cardImageWrapper}>
           <Image
-            src={props.img_url}
+            className={styles.cardImage}
+            src={props.imgUrl}
             width={260}
             height={160}
-            alt={`Coffee store: {name}`}
+            alt={props.name}
           />
-        </a>
-      </Link>
-    </div>
+        </div>
+      </div>
+    </Link>
   );
 };
 
