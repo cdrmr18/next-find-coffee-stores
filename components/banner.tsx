@@ -1,6 +1,11 @@
 import styles from "./banner.module.css";
 
-const Banner = ({ buttonText, handleOnClick }) => {
+type BannerProps = {
+  buttonText: string;
+  handleOnClick: () => void;
+};
+
+const Banner = (props: BannerProps) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
@@ -9,8 +14,8 @@ const Banner = ({ buttonText, handleOnClick }) => {
       </h1>
       <p className={styles.subTitle}>Discover your local coffee</p>
       <div className={styles.buttonWrapper}>
-        <button className={styles.button} onClick={handleOnClick}>
-          {buttonText}
+        <button className={styles.button} onClick={props.handleOnClick}>
+          {props.buttonText}
         </button>
       </div>
     </div>

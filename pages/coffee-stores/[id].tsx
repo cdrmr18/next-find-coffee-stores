@@ -6,7 +6,7 @@ const CoffeeStores = () => {
   const query = router.query.id;
   return (
     <div>
-      CoffeeStores <p>{query}</p>
+      CoffeeStore <p>{query}</p>
       <Link href="/">Back home</Link>
     </div>
   );

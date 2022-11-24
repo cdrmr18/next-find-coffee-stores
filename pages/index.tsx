@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/banner";
+import Card from "../components/card";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -28,6 +29,8 @@ export default function Home() {
             alt="girl relaxing"
           />
         </div>
+
+        <Card name={"Coffee store name"} img_url={"#"} href={"#"} />
       </main>
     </div>
   );
