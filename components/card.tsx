@@ -7,6 +7,7 @@ type CardProps = {
   name: string;
   imgUrl: string;
   href: string;
+  className: string;
 };
 
 const Card = (props: CardProps) => {

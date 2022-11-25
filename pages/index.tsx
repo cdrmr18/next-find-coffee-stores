@@ -30,11 +30,24 @@ export default function Home() {
           />
         </div>
       </main>
-      <section>
+      <section className={styles.cardWrapper}>
         <Card
           name={"Coffee store name"}
           imgUrl="/images/relax.svg"
           href="/coffee-stores/store-name"
+          className={styles.card}
+        />
+        <Card
+          name={"Coffee store name"}
+          imgUrl="/images/relax.svg"
+          href="/coffee-stores/store-name"
+          className={styles.card}
+        />
+        <Card
+          name={"Coffee store name"}
+          imgUrl="/images/relax.svg"
+          href="/coffee-stores/store-name"
+          className={styles.card}
         />
       </section>
     </div>
